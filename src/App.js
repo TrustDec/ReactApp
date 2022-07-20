@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   useEffect(() => {
-    console.log(`update---${count}`)
-  }, [count])
-
+    console.log(Object.is("0", 1));
+  }, [count]);
   return (
     <div>
       <button onClick={() => setCount(count + 1)}>
